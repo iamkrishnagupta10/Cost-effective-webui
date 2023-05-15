@@ -95,3 +95,6 @@ user.search_website("OpenAI GPT-4")
 # Close the browser
 user.close_browser()
 
+This example code visits a predefined website and performs a simple task. 
+This is a simplified example and only demonstrates the concept of automating browsing behavior. 
+It doesn't incorporate complexities like user footprint masking, IP management, or Google and YouTube's algorithm.
