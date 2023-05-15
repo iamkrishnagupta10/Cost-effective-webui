@@ -1,5 +1,9 @@
 # Cost-effective-webui
-A Notes file for Algochemist
+Please note that this is a high-level overview and does not include the intricate details required for this project such as managing cost constraints, 
+ensuring ethical guidelines and legal regulations, understanding Google and YouTube's algorithm and web behavior monitoring practices, etc.
+A more detailed and tailored solution would require a deeper understanding of the project scope and specific technical requirements. 
+The provided pseudo code is intended to illustrate a general structure of how the project could be approached. 
+It is not executable code and some of the functionalities implied (like creating aged Google accounts or assigning new IPs) may require external services or further implementation.
 
 # Import necessary libraries
 # This could include libraries for web scraping (like selenium), AI (like TensorFlow), IP management (like requests), etc.
