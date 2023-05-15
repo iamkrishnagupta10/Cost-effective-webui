@@ -50,10 +50,10 @@ project = Project(100)
 # Start the project
 project.start_project()
 
-#Example 1 (From your Tasks)
-This example code visits a predefined website and performs a simple task. 
+
+**This example code visits a predefined website and performs a simple task. 
 This is a simplified example and only demonstrates the concept of automating browsing behavior. 
-It doesn't incorporate complexities like user footprint masking, IP management, or Google and YouTube's algorithm.
+It doesn't incorporate complexities like user footprint masking, IP management, or Google and YouTube's algorithm.**
 
 # Importing necessary libraries
 from selenium import webdriver
@@ -98,3 +98,44 @@ user.close_browser()
 This example code visits a predefined website and performs a simple task. 
 This is a simplified example and only demonstrates the concept of automating browsing behavior. 
 It doesn't incorporate complexities like user footprint masking, IP management, or Google and YouTube's algorithm.
+
+# Importing necessary libraries
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Define a class for a user
+class User:
+    def __init__(self):
+        # Initialize a new browser instance
+        self.driver = webdriver.Firefox() # Replace with the browser driver of your choice
+
+    def visit_website(self, url):
+        # Visit a specific URL
+        self.driver.get(url)
+        time.sleep(2) # Wait for 2 seconds to emulate human behavior
+
+    def search_website(self, search_term):
+        # Find the search bar and enter a search term
+        search_bar = self.driver.find_element_by_name("q") # Replace "q" with the appropriate name attribute of the search bar
+        search_bar.clear()
+        search_bar.send_keys(search_term)
+        search_bar.send_keys(Keys.RETURN) # Press enter to submit the search
+        time.sleep(2) # Wait for 2 seconds to emulate human behavior
+
+    def close_browser(self):
+        # Close the browser instance
+        self.driver.close()
+
+# Create a new user
+user = User()
+
+# Visit a website
+user.visit_website("http://www.google.com")
+
+# Perform a search
+user.search_website("OpenAI GPT-4")
+
+# Close the browser
+user.close_browser()
+
